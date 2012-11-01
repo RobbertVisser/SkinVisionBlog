@@ -115,9 +115,9 @@ function twentyten_setup() {
 		// Callback for styling the header preview in the admin.
 		'admin-head-callback' => 'twentyten_admin_header_style',
 	);
-	
+
 	add_theme_support( 'custom-header', $custom_header_support );
-	
+
 	if ( ! function_exists( 'get_custom_header' ) ) {
 		// This is all for compatibility with versions of WordPress prior to 3.4.
 		define( 'HEADER_TEXTCOLOR', '' );
@@ -250,7 +250,7 @@ add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function twentyten_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) . '</a>';
+	return ' <a href="'. get_permalink() . '">' . __( 'read more <span class="meta-nav">+</span>', 'twentyten' ) . '</a>';
 }
 
 /**
