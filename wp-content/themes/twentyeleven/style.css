@@ -74,10 +74,10 @@ body {
 }
 #page {
 	margin: 2em auto;
-	max-width: 1000px;
+	max-width: 880px;
 }
 #branding hgroup {
-	margin: 0 7.6%;
+	margin: 60px 20px 10px;
 }
 #access div {
 	margin: 0 7.6%;
@@ -88,31 +88,28 @@ body {
 	width: 100%;
 }
 #content {
-	margin: 0 34% 0 7.6%;
-	width: 58.4%;
+	margin: 20px;
+	width: 70%;
+	border-right: 1px solid #f0f0f0;
 }
 #secondary {
 	float: right;
-	margin-right: 7.6%;
-	width: 18.8%;
+	margin-right: 20px;
+	margin-top: 20px;
+	width: 23%;
 }
 
 /* Singular */
-.singular #primary {
-	margin: 0;
-}
 .singular #content,
 .left-sidebar.singular #content {
-	margin: 0 7.6%;
+	margin: 20px;
 	position: relative;
-	width: auto;
 }
 .singular .entry-header,
 .singular .entry-content,
 .singular footer.entry-meta,
 .singular #comments-title {
 	margin: 0 auto;
-	width: 68.9%;
 }
 
 /* Attachments */
@@ -160,12 +157,12 @@ body {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.625em;
+  margin-right: 20px;
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.625em;
+  margin-left: 20px;
 }
 .aligncenter {
 	clear: both;
@@ -316,14 +313,18 @@ body {
 
 body, input, textarea {
 	color: #373737;
-	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font: 14px "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	line-height: 1.625;
 }
 body {
-	background: #e2e2e2;
+	background-color: #e2e2e2;
+  background-image: url(./images/background.jpg), url(./images/bg-footer2.png);
+  background-position: center top, center bottom;
+  background-repeat: no-repeat, repeat-x;
+	background-attachment: scroll !important;
 }
-#page {
+#primary {
 	background: #fff;
 }
 
@@ -389,8 +390,8 @@ blockquote em, blockquote i, blockquote cite {
 }
 blockquote cite {
 	color: #666;
-	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font: 12px "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 }
@@ -497,19 +498,20 @@ a:hover {
 	left: 7.6%;
 }
 
+a.more-link {
+  display: block;
+  margin-top: 10px;
+}
 
 /* =Header
 ----------------------------------------------- */
 
 #branding {
-	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
 	position: relative;
 	z-index: 9999;
 }
 #site-title {
-	margin-right: 270px;
-	padding: 3.65625em 0 0;
 }
 #site-title a {
 	color: #111;
@@ -529,9 +531,6 @@ a:hover {
 	margin: 0 270px 3.65625em 0;
 }
 #branding img {
-	height: auto;
-	margin-bottom: -7px;
-	width: 100%;
 }
 
 
@@ -625,14 +624,15 @@ a:hover {
 /* Search Form */
 #branding #searchform {
 	position: absolute;
-	top: 3.8em;
-	right: 7.6%;
+	top: 0px;
+	right: 20px;
 	text-align: right;
 }
 #branding #searchform div {
 	margin: 0;
 }
 #branding #s {
+	background-color: #f9f9f9;
 	float: right;
 	-webkit-transition-duration: 400ms;
 	-webkit-transition-property: width, background;
@@ -643,11 +643,11 @@ a:hover {
 	-o-transition-duration: 400ms;
 	-o-transition-property: width, background;
 	-o-transition-timing-function: ease;
-	width: 72px;
+	width: 120px;
 }
 #branding #s:focus {
-	background-color: #f9f9f9;
-	width: 196px;
+	background-color: white;
+	width: 200px;
 }
 #branding #searchsubmit {
 	display: none;
@@ -703,8 +703,8 @@ a:hover {
 .hentry,
 .no-results {
 	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
-	padding: 0 0 1.625em;
+	margin-right: 20px;
+	padding: 0 0 20px 0;
 	position: relative;
 }
 .hentry:last-child,
@@ -718,7 +718,7 @@ a:hover {
 }
 .entry-title,
 .entry-header .entry-meta {
-	padding-right: 76px;
+  border-bottom: 1px solid #F0F0F0;
 }
 .entry-title {
 	clear: both;
@@ -856,7 +856,7 @@ dl.gallery-item {
 	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
 }
 img[class*="align"],
-img[class*="wp-image-"],
+img[class*="-"],
 img[class*="attachment-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
@@ -875,7 +875,7 @@ img.size-large {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 1.625em;
+	margin-bottom: 20px;
 }
 p img,
 .wp-caption {
@@ -937,8 +937,6 @@ img#wpstats {
 img[class*="align"],
 img[class*="wp-image-"],
 #content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-	border: 1px solid #ddd;
-	padding: 6px;
 }
 .wp-caption img {
 	border-color: #eee;
@@ -1022,29 +1020,10 @@ object {
 }
 
 /* Comments link */
-.entry-header .comments-link a {
-	background: #eee url(images/comment-bubble.png) no-repeat;
-	color: #666;
-	font-size: 13px;
-	font-weight: normal;
-	line-height: 35px;
-	overflow: hidden;
-	padding: 0 0 0;
-	position: absolute;
-	top: 1.5em;
-	right: 0;
-	text-align: center;
-	text-decoration: none;
-	width: 43px;
-	height: 36px;
-}
+.entry-header .comments-link a { }
 .entry-header .comments-link a:hover,
 .entry-header .comments-link a:focus,
-.entry-header .comments-link a:active {
-	background-color: #1982d1;
-	color: #fff;
-	color: rgba(255,255,255,0.8);
-}
+.entry-header .comments-link a:active { }
 .entry-header .comments-link .leave-reply {
 	visibility: hidden;
 }
@@ -1752,15 +1731,13 @@ section.recent-posts .other-recent-posts li:after {
 }
 .widget {
 	clear: both;
-	margin: 0 0 2.2em;
+	margin: 0 0 20px 0;
 }
 .widget-title {
-	color: #666;
-	font-size: 10px;
-	font-weight: 500;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
+	color: #24282b;
+	font-size: 18px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #24282B;
 }
 .widget ul {
 	font-size: 15px;
@@ -1809,6 +1786,15 @@ section.recent-posts .other-recent-posts li:after {
 	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
 	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
 	color: #bfddf3;
+}
+
+.widget ul li {
+  list-style: none;
+  border-bottom: 1px dotted #f0f0f0;
+}
+
+.widget ul li a {
+  padding-left: 10px;
 }
 
 /* Ephemera Widget */
@@ -2244,9 +2230,9 @@ p.comment-form-comment {
 	background: #f9f9f9;
 	border-top: 1px solid #ddd;
 	color: #666;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 2.2em;
-	padding: 2.2em 0.5em;
+	padding: 20px;
 	text-align: center;
 }
 #site-generator a {
@@ -2261,7 +2247,8 @@ p.comment-form-comment {
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
 	#main #content {
-		margin: 0 7.6%;
+		margin: 0 20px;
+    border-right: none;
 		width: auto;
 	}
 	#nav-below {
@@ -2686,9 +2673,9 @@ p.comment-form-comment {
 	margin-right: 7.6%;
 }
 
-/* =IE8 
------------------------------------------------ */ 
- 
-#ie8 section.feature-image.large img { 
-	width: 100%; 
-} 
+/* =IE8
+----------------------------------------------- */
+
+#ie8 section.feature-image.large img {
+	width: 100%;
+}
