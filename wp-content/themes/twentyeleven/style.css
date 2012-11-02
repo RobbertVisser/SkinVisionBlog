@@ -91,7 +91,9 @@ body {
 	margin: 20px;
 	width: 70%;
 	border-right: 1px solid #f0f0f0;
-}
+/*  padding-bottom: 9999px;
+  margin-bottom: -9999px;
+*/}
 #secondary {
 	float: right;
 	margin-right: 20px;
@@ -326,6 +328,9 @@ body {
 }
 #primary {
 	background: #fff;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+/*  overflow: hidden;*/
 }
 
 /* Headings */
@@ -684,6 +689,7 @@ a.more-link {
 #main {
 	clear: both;
 	padding: 1.625em 0 0;
+	overflow: hidden;
 }
 .page-title {
 	color: #666;
@@ -704,7 +710,6 @@ a.more-link {
 .no-results {
 	border-bottom: 1px solid #ddd;
 	margin-right: 20px;
-	padding: 0 0 20px 0;
 	position: relative;
 }
 .hentry:last-child,
@@ -1064,7 +1069,7 @@ article.format-status .entry-content {
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
 	border-bottom: none;
-	padding: 4.875em 0 0;
+	padding: 0;
 	position: relative;
 }
 .singular.page .hentry {
@@ -1081,9 +1086,6 @@ article.format-status .entry-content {
 	padding-right: 0;
 }
 .singular .entry-header .entry-meta {
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 blockquote.pull {
 	font-size: 21px;
@@ -1674,7 +1676,7 @@ section.recent-posts .other-recent-posts li:after {
 #content nav {
 	clear: both;
 	overflow: hidden;
-	padding: 0 0 1.625em;
+	padding: 0;
 }
 #content nav a {
 	font-size: 12px;
@@ -1705,11 +1707,11 @@ section.recent-posts .other-recent-posts li:after {
 
 /* Singular navigation */
 #nav-single {
-	float: right;
 	position: relative;
 	top: -0.3em;
 	text-align: right;
 	z-index: 1;
+	margin-right: 20px;
 }
 #nav-single .nav-previous,
 #nav-single .nav-next {
@@ -1722,6 +1724,9 @@ section.recent-posts .other-recent-posts li:after {
 	padding-right: .5em;
 }
 
+div#comments {
+  margin-right: 20px;
+}
 
 /* =Widgets
 ----------------------------------------------- */
@@ -1896,8 +1901,7 @@ section.ephemera .entry-title a span {
 }
 .commentlist {
 	list-style: none;
-	margin: 0 auto;
-	width: 68.9%;
+  margin-left: 100px;
 }
 .content .commentlist,
 .page-template-sidebar-page-php .commentlist {
@@ -2047,7 +2051,6 @@ a.comment-reply-link > span {
 	margin: 0 auto 1.625em;
 	padding: 1.625em;
 	position: relative;
-	width: 68.9%;
 }
 #respond input[type="text"],
 #respond textarea {
@@ -2113,30 +2116,33 @@ a.comment-reply-link > span {
 	margin: 10px 0;
 }
 #respond .form-submit {
-	float: right;
-	margin: -20px 0 10px;
+  margin: 0px;
 }
 #respond input#submit {
-	background: #222;
-	border: none;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	color: #eee;
-	cursor: pointer;
-	font-size: 15px;
-	margin: 20px 0;
-	padding: 5px 42px 5px 22px;
-	position: relative;
-	left: 30px;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+  border: 1px solid #1a94e1; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;
+  padding: 5px 20px;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #49ACEA;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #49ACEA), color-stop(100%, #3781B0));
+  background-image: -webkit-linear-gradient(top, #49ACEA, #3781B0);
+  background-image: -moz-linear-gradient(top, #49ACEA, #3781B0);
+  background-image: -ms-linear-gradient(top, #49ACEA, #3781B0);
+  background-image: -o-linear-gradient(top, #49ACEA, #3781B0);
+  background-image: linear-gradient(top, #49ACEA, #3781B0);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#49ACEA, endColorstr=#3781B0);
 }
-#respond input#submit:active {
-	background: #1982d1;
-	color: #bfddf3;
+#respond input#submit:hover {
+  border: 1px solid #1579b8;
+  background-color: #1b97e5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b97e5), color-stop(100%, #2b6589));
+  background-image: -webkit-linear-gradient(top, #1b97e5, #2b6589);
+  background-image: -moz-linear-gradient(top, #1b97e5, #2b6589);
+  background-image: -ms-linear-gradient(top, #1b97e5, #2b6589);
+  background-image: -o-linear-gradient(top, #1b97e5, #2b6589);
+  background-image: linear-gradient(top, #1b97e5, #2b6589);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#1b97e5, endColorstr=#2b6589);
 }
+
 #respond #cancel-comment-reply-link {
 	color: #666;
 	margin-left: 10px;
@@ -2653,6 +2659,25 @@ p.comment-form-comment {
 
 }
 
+#backtotop {
+  width: 50px;
+  position: absolute;
+  margin-left: -80px;
+  margin-top: -180px;
+  background-color: gray;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+#backtotop div {
+  text-align: center;
+  padding: 45px 5px 5px 5px;
+}
+
+#backtotop div a, #backtotop div a:hover {
+  color: white;
+  text-decoration: none;
+}
 
 /* =IE7
 ----------------------------------------------- */
