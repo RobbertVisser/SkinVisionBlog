@@ -18,6 +18,15 @@
         2012 - &copy; WhatIsMelanoma.com
 			</div>
 	</footer><!-- #colophon -->
+
+  <div id="backtotop">
+    <div>
+      <a href="#">
+        back to top
+      </a>
+    </div>
+  </div>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
