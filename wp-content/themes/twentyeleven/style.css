@@ -2704,3 +2704,7 @@ p.comment-form-comment {
 #ie8 section.feature-image.large img {
 	width: 100%;
 }
+
+#ie8 body, #ie7 body {
+  background: #eee url(./images/background.jpg) center top no-repeat;
+}
