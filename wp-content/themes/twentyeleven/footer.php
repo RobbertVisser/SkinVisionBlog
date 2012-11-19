@@ -15,7 +15,7 @@
 	<footer id="colophon" role="contentinfo">
 
 			<div id="site-generator">
-        2012 - &copy; WhatIsMelanoma.com
+        2012 - &copy; what-is-melanoma.com
 			</div>
 	</footer><!-- #colophon -->
 
