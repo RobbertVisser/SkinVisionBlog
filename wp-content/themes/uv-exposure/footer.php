@@ -15,18 +15,10 @@
 	<footer id="colophon" role="contentinfo">
     <div id="footer-wrapper">
 			<div id="site-generator">
-        2012 - &copy; skin-moles.com
+        2012 - &copy; uv-exposure.com
 			</div>
 		</div>
 	</footer><!-- #colophon -->
-
-  <div id="backtotop">
-    <div>
-      <a href="#">
-        back to top
-      </a>
-    </div>
-  </div>
 
 </div><!-- #page -->
 

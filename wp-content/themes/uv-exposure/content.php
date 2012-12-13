@@ -22,23 +22,6 @@
 
 
 
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-		<?php else : ?>
-		<div class="entry-content">
-			<?php the_content( __( 'read more <span class="meta-nav">+</span>', 'twentyeleven' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
-
-      <?php edit_post_link( __( 'Edit article', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-
-		</div><!-- .entry-content -->
-		<?php endif; ?>
-
-
-
-
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php twentyeleven_posted_on(); ?>
@@ -65,6 +48,26 @@
 
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
+
+
+
+		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+		<?php else : ?>
+		<div class="entry-content">
+			<?php the_content( __( 'read more <span class="meta-nav">+</span>', 'twentyeleven' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+
+      <?php edit_post_link( __( 'Edit article', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+
+		</div><!-- .entry-content -->
+		<?php endif; ?>
+
+
+
+
 
 
 

@@ -75,7 +75,7 @@
   	<header id="branding" role="banner">
   			<hgroup>
   				<a id="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-  				  <img src="<?php bloginfo( 'template_url' ); ?>/images/branding.png">
+  				  SUN, FUN AND SKIN HEALTH
   				</a>
   			</hgroup>
 
@@ -116,18 +116,6 @@
   			</a>
   			<?php endif; // end check for removed header image ?>
 
-  			<?php
-  				// Has the text been hidden?
-  				if ( 'blank' == get_header_textcolor() ) :
-  			?>
-  				<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
-  				<?php get_search_form(); ?>
-  				</div>
-  			<?php
-  				else :
-  			?>
-          <?php get_search_form(); ?>
-  			<?php endif; ?>
   	</header><!-- #branding -->
   </div>
 </div>
